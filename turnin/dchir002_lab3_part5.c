@@ -23,14 +23,13 @@ int main(void) {
 	b = 0x00;
 
 	if (d >= 70)
-		b = b | 0x01;
+		b = b | 0x02;
 	
 	else if (d > 5 && d < 70){
-		b = b & 0x01;
-		b = b | 0x04;
+		b = b | 0x02;
 	}
 	else
-		b = 0x00;
+		b = 0x04;
 
 	PORTB = b;
 
