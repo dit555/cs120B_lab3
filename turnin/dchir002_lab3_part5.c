@@ -28,8 +28,10 @@ int main(void) {
 	else if (d > 5 && d < 70){
 		b = b | 0x02;
 	}
-	else
+	else if (d == 5)
 		b = 0x04;
+	else
+		b = 0x00;
 
 	PORTB = b;
 
