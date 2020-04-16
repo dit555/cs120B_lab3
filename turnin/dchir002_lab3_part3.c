@@ -23,6 +23,7 @@ int main(void) {
 	a = PINA;
 	c = 0x00;
 	sum = 0x00;
+	a = a & 0x0F;
 	if ( a == 1 || a == 2)
 		sum = 0x20;
 	
@@ -43,7 +44,7 @@ int main(void) {
 
 	if ( a <= 4)
 		sum = sum | 0x40;
-	c = a;
+	c = PINA;
 	c = c & 0x70;
 	if ( c == 0x30)
 		sum = sum | 0x80;
